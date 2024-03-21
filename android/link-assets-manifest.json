@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Bentham-Regular.ttf",
+      "sha1": "8692afbb54bd039e35e607b04efd00d605384580"
+    },
+    {
+      "path": "assets/fonts/MadimiOne-Regular.ttf",
+      "sha1": "431592c440f0f171a09ed3850721cfd988416ef2"
+    }
+  ]
+}
