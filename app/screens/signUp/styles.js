@@ -22,6 +22,13 @@ export default StyleSheet.create({
     paddingHorizontal: 12,
     borderRadius: 15,
     marginTop: 20,
+  }),
+  googleButton: colors => ({
+    backgroundColor: colors.light100,
+    borderWidth: 1,
+    borderColor: colors.light20,
+    paddingHorizontal: 12,
+    borderRadius: 15,
     marginBottom: 35,
   }),
   forgotPasswordText: colors => ({

@@ -5,10 +5,11 @@ import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {CustomTextInput} from '../../components/shared';
 import {CustomText, CustomButton} from '../../UI';
+import GoogleIcon from '../../../assets/icons/google_icon.svg';
 import {useTheme} from '@rneui/themed';
 import styles from './styles';
 
-const LogIn = () => {
+const SignUp = () => {
   const {theme} = useTheme();
   const colors = theme.colors;
   const navigation = useNavigation();
@@ -19,8 +20,9 @@ const LogIn = () => {
     formState: {errors},
   } = useForm({
     defaultValues: {
-      firstName: '',
-      lastName: '',
+      name: '',
+      email: '',
+      password: '',
     },
   });
 
@@ -36,9 +38,24 @@ const LogIn = () => {
           size={24}
           color={colors.black100}
         />
-        <CustomText type="title3">Login</CustomText>
+        <CustomText type="title3">Sign Up</CustomText>
       </View>
-
+      <Controller
+        control={control}
+        rules={{
+          required: true,
+        }}
+        render={({field: {onChange, onBlur, value}}) => (
+          <CustomTextInput
+            placeholder="Name"
+            onChange={onChange}
+            onBlur={onBlur}
+            value={value}
+          />
+        )}
+        name="name"
+      />
+      {errors.name && <Text>This is required.</Text>}
       <Controller
         control={control}
         rules={{
@@ -50,12 +67,11 @@ const LogIn = () => {
             onChange={onChange}
             onBlur={onBlur}
             value={value}
-            showPassIcon
           />
         )}
-        name="firstName"
+        name="email"
       />
-      {errors.firstName && <Text>This is required.</Text>}
+      {errors.email && <Text>This is required.</Text>}
       <Controller
         control={control}
         rules={{
@@ -67,30 +83,43 @@ const LogIn = () => {
             onChange={onChange}
             onBlur={onBlur}
             value={value}
+            showPassIcon
           />
         )}
-        name="lastName"
+        name="password"
       />
+      {errors.password && <Text>This is required.</Text>}
       <CustomButton
         textStyle={{fontSize: 16, fontWeight: '600'}}
         style={styles.button(colors)}
-        title="Login"
+        title="Sign Up"
         onPress={handleSubmit(onSubmit)}
       />
       <CustomText
-        onPress={() => navigation.navigate('forgotPassword')}
-        customStyle={styles.forgotPasswordText(colors)}
-        type="title3">
-        Forgot Password?
+        type="regular2"
+        customStyle={{
+          alignSelf: 'center',
+          color: colors.dark25,
+          marginVertical: 20,
+        }}>
+        Or with
       </CustomText>
+
+      <CustomButton
+        title="Sign Up with Google"
+        iconLeft={<GoogleIcon style={{marginRight: 16}} />}
+        textStyle={{color: colors.dark100, fontWeight: '500'}}
+        style={styles.googleButton(colors)}
+      />
+
       <View style={styles.signUpContainer}>
         <CustomText customStyle={styles.text(colors)}>
-          Don't have an account yet?
+          Already have an account?
         </CustomText>
-        <CustomText customStyle={styles.signUpText(colors)}>Sign Up</CustomText>
+        <CustomText customStyle={styles.signUpText(colors)}>Login</CustomText>
       </View>
     </View>
   );
 };
 
-export default LogIn;
+export default SignUp;

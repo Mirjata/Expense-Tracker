@@ -11,6 +11,8 @@
 		0C80B921A6F3F58F76C31292 /* libPods-myApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-myApp.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		5013CFB52BAC6B650065763A /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 5013CFB42BAC6B650065763A /* main.jsbundle */; };
+		5013CFB72BAC6FAA0065763A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5013CFB62BAC6FAA0065763A /* GoogleService-Info.plist */; };
 		50E6F6912BAB1321000AD901 /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50E6F67E2BAB1321000AD901 /* FontAwesome6_Brands.ttf */; };
 		50E6F6922BAB1321000AD901 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50E6F67F2BAB1321000AD901 /* Octicons.ttf */; };
 		50E6F6932BAB1321000AD901 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50E6F6802BAB1321000AD901 /* FontAwesome5_Brands.ttf */; };
@@ -55,6 +57,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = myApp/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-myApp-myAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myApp-myAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-myApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApp.debug.xcconfig"; path = "Target Support Files/Pods-myApp/Pods-myApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5013CFB42BAC6B650065763A /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.jsbundle; path = myApp/main.jsbundle; sourceTree = "<group>"; };
+		5013CFB62BAC6FAA0065763A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		50E6F6782BAB1189000AD901 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		50E6F67E2BAB1321000AD901 /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome6_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome6_Brands.ttf"; sourceTree = "<group>"; };
 		50E6F67F2BAB1321000AD901 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				5013CFB62BAC6FAA0065763A /* GoogleService-Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -156,6 +161,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				5013CFB42BAC6B650065763A /* main.jsbundle */,
 				50E6F6872BAB1321000AD901 /* AntDesign.ttf */,
 				50E6F68E2BAB1321000AD901 /* Entypo.ttf */,
 				50E6F6852BAB1321000AD901 /* EvilIcons.ttf */,
@@ -310,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5013CFB52BAC6B650065763A /* main.jsbundle in Resources */,
 				50E6F6912BAB1321000AD901 /* FontAwesome6_Brands.ttf in Resources */,
 				50E6F6922BAB1321000AD901 /* Octicons.ttf in Resources */,
 				50E6F6932BAB1321000AD901 /* FontAwesome5_Brands.ttf in Resources */,
@@ -329,6 +336,7 @@
 				50E6F6A12BAB1321000AD901 /* Entypo.ttf in Resources */,
 				50E6F6A22BAB1321000AD901 /* SimpleLineIcons.ttf in Resources */,
 				50E6F6A32BAB1321000AD901 /* FontAwesome5_Regular.ttf in Resources */,
+				5013CFB72BAC6FAA0065763A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +560,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JTAWBKJV7G;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = myApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -564,7 +573,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miro.expenseTracker;
 				PRODUCT_NAME = myApp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -579,6 +588,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JTAWBKJV7G;
 				INFOPLIST_FILE = myApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -590,7 +600,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miro.expenseTracker;
 				PRODUCT_NAME = myApp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

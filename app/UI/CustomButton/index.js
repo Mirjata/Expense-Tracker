@@ -17,6 +17,7 @@ const CustomButton = ({
   disabled,
   activeOpacity,
   loading,
+  customStyle,
 }) => {
   return (
     <TouchableOpacity
